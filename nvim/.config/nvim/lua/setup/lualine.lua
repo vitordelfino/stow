@@ -80,7 +80,7 @@ local dayfox_theme = {
 
 lualine.setup {
   options = {
-    theme = sunbather_theme,
+    theme = "dracula",
     component_separators = '|',
     section_separators = { left = '', right = '' },
   },

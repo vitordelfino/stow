@@ -13,6 +13,7 @@ require("setup/completion")
 require("setup/format")
 require("setup/vimwiki")
 require("setup/comment")
+require("setup/rainbow")
 
 -- ui configuration
 vim.g.fillchars = "vim.g.fillchars" .. "vert:\\|"
@@ -40,7 +41,9 @@ vim.g.background = "dark"
 vim.g.t_8f = "ESC[38;2;%lu;%lu;%lum"
 vim.g.t_8b = "ESC[48;2;%lu;%lu;%lum"
 -- cool themes: nightfox sunbather gruvbox
-vim.cmd([[ colorscheme sunbather ]])
+vim.cmd([[ packadd! dracula_pro ]])
+vim.cmd([[ let g:dracula_colorterm = 0 ]])
+vim.cmd([[ colorscheme dracula_pro ]])
 vim.cmd([[ hi VertSplit guibg=NONE guifg=fg ]])
 
 -- terminal configuration

@@ -44,6 +44,9 @@ function packer_startup(use)
   use "Olical/conjure"
   use "guns/vim-sexp"
   use "tpope/vim-sexp-mappings-for-regular-people"
+  use "frazrepo/vim-rainbow"
+  use "github/copilot.vim"
+  use "xianzhon/vim-code-runner"
 end
 
 local packer_config = {

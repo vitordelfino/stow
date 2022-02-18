@@ -14,6 +14,7 @@ require("setup/format")
 require("setup/vimwiki")
 require("setup/comment")
 require("setup/rainbow")
+require("setup/close_tag")
 
 -- ui configuration
 vim.g.fillchars = "vim.g.fillchars" .. "vert:\\|"

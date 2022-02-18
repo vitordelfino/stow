@@ -47,6 +47,7 @@ function packer_startup(use)
   use "frazrepo/vim-rainbow"
   use "github/copilot.vim"
   use "xianzhon/vim-code-runner"
+  use "windwp/nvim-ts-autotag"
 end
 
 local packer_config = {

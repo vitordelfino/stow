@@ -81,16 +81,27 @@ local dayfox_theme = {
 lualine.setup {
   options = {
     theme = "dracula",
-    component_separators = '|',
-    section_separators = { left = '', right = '' },
+    component_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' },
   },
   sections = {
-    lualine_a = { 'mode' },
-    lualine_b = { 'filename', 'branch', { floaterm_section }, 'diagnostics' },
+    lualine_a = { 
+      {
+       'filename',
+        filestatus = true,
+        path = 1,
+        symbols = {
+          modified = '📝',
+        }
+      },
+    },
+    lualine_b = { 'branch', { floaterm_section }, 'diagnostics' },
     lualine_c = {},
     lualine_x = {},
-    lualine_y = {},
-    lualine_z = {},
+    lualine_y = {
+      'filetype'
+    },
+    lualine_z = { 'mode' },
   },
   tabline = {},
   inactive_sections = {},

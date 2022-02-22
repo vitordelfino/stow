@@ -1,0 +1,21 @@
+gui:
+  theme:
+    selectedLineBgColor:
+      - reverse
+    selectedRangeBgColor:
+      - reverse
+  branchColors:
+    'main': '#ec3de7'
+    'feat': '#2ace75'
+    'feature': '#2ace75'
+    'fix': '#e15050'
+    'hotfix': '#e15050'
+    'refactor': '#3d8fec'
+  authorColors:
+    'Vitor Delfino': '#3ddfec'
+customCommands:
+  - key: "C"
+    command: "git-cz"
+    context: "files"
+    loadintText: "opening git-cz commit toll"
+    subprocess: true

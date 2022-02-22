@@ -1,6 +1,6 @@
 [user]
-	email = ynrbode@gmail.com
-	name = Yves Bode
+	email = me@vitordelfino.dev
+	name = Vitor Delfino
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential

@@ -38,7 +38,7 @@ function packer_startup(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "saadparwaiz1/cmp_luasnip"
   use "L3MON4D3/LuaSnip"
-  use "lukas-reineke/format.nvim"
+  use "lukas-reineke/lsp-format.nvim"
   use "mhinz/vim-sayonara"
   use "vimwiki/vimwiki"
   use "Olical/conjure"

@@ -16,6 +16,7 @@ function packer_startup(use)
     "Shougo/defx.nvim",
     run = "vim.cmd([[UpdateRemotePlugins]])"
   }
+  use "kristijanhusak/defx-icons"
   use "kristijanhusak/defx-git"
   use "voldikss/vim-floaterm"
   use "editorconfig/editorconfig-vim"

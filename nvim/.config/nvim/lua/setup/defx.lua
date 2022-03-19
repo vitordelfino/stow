@@ -22,5 +22,8 @@ vim.cmd([[autocmd FileType defx setlocal nonumber norelativenumber]])
 vim.cmd([[autocmd BufLeave \[defx\]* call defx#call_action("add_session")]])
 vim.cmd([[call defx#custom#column("git", "indicators", { "Modified": "GMO", "Staged": "GST", "Untracked": "GUT", "Renamed": "GRN", "Unmerged": "GUN", "Ignored": "GIG", "Deleted": "GDD", "Unknown": "GUK" })]])
 
-vim.api.nvim_set_keymap("n", "<leader>o", ":Defx -session-file='/tmp/defx_session' -columns=space:space:indent:indent:space:icon:space:filename:type:git -show-ignored-files<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>O", ":Defx -session-file='/tmp/defx_session' -columns=space:space:indent:indent:space:icon:space:filename:type:git -show-ignored-files `escape(expand('%:p:h'), ' :')` -search=`expand('%:p')`<CR>", { noremap = true, silent = true })
+vim.cmd([[call defx#custom#column('icon', { 'directory_icon': '▸', 'opened_icon': '▾' })]])
+vim.cmd([[call defx#custom#option('_', { 'columns': 'icon:ident:icons:filename' })]])
+
+vim.api.nvim_set_keymap("n", "<leader>o", ":Defx -session-file='/tmp/defx_session' -columns=space:space:indent:indent:space:icon:space:icons:space:filename:type:git -show-ignored-files<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>O", ":Defx -session-file='/tmp/defx_session' -columns=space:space:indent:indent:space:icon:space:icons:space:filename:type:git -show-ignored-files `escape(expand('%:p:h'), ' :')` -search=`expand('%:p')`<CR>", { noremap = true, silent = true })

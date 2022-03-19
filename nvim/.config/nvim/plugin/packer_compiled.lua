@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/Users/vitor.delfino/.local/share/nvim/site/pack/packer/start/defx-git",
     url = "https://github.com/kristijanhusak/defx-git"
   },
+  ["defx-icons"] = {
+    loaded = true,
+    path = "/Users/vitor.delfino/.local/share/nvim/site/pack/packer/start/defx-icons",
+    url = "https://github.com/kristijanhusak/defx-icons"
+  },
   ["defx.nvim"] = {
     loaded = true,
     path = "/Users/vitor.delfino/.local/share/nvim/site/pack/packer/start/defx.nvim",
@@ -114,15 +119,15 @@ _G.packer_plugins = {
     path = "/Users/vitor.delfino/.local/share/nvim/site/pack/packer/start/editorconfig-vim",
     url = "https://github.com/editorconfig/editorconfig-vim"
   },
-  ["format.nvim"] = {
-    loaded = true,
-    path = "/Users/vitor.delfino/.local/share/nvim/site/pack/packer/start/format.nvim",
-    url = "https://github.com/lukas-reineke/format.nvim"
-  },
   gruvbox = {
     loaded = true,
     path = "/Users/vitor.delfino/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
+  },
+  ["lsp-format.nvim"] = {
+    loaded = true,
+    path = "/Users/vitor.delfino/.local/share/nvim/site/pack/packer/start/lsp-format.nvim",
+    url = "https://github.com/lukas-reineke/lsp-format.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,

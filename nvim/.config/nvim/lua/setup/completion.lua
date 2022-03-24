@@ -1,9 +1,50 @@
 local cmp = require("cmp")
 local luasnip = require("luasnip")
+local lspkind = require("lspkind")
+local types = require("cmp.types")
+local str = require("cmp.utils.str")
 
-vim.o.completeopt = "menuone,noselect"
+vim.o.completeopt = "menu,menuone,noselect"
 
 cmp.setup({
+    completion = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }, scrollbar = "║" },
+	  documentation = {
+		  border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+		  scrollbar = "║",
+	  },
+    formatting = {
+      fields = {
+			  cmp.ItemField.Abbr,
+			  cmp.ItemField.Menu,
+			  cmp.ItemField.Kind,
+		  },
+      format = lspkind.cmp_format({
+          before = function (entry, vim_item)
+            local word = entry:get_insert_text()
+				    if entry.completion_item.insertTextFormat == types.lsp.InsertTextFormat.Snippet then
+					    word = vim.lsp.util.parse_snippet(word)
+				    end
+				    word = str.oneline(word)
+
+				    -- concatenates the string
+				    -- local max = 50
+				    -- if string.len(word) >= max then
+				    -- 	local before = string.sub(word, 1, math.floor((max - 3) / 2))
+				    -- 	word = before .. "..."
+				    -- end
+
+				    if
+					    entry.completion_item.insertTextFormat == types.lsp.InsertTextFormat.Snippet
+					    and string.sub(vim_item.abbr, -1, -1) == "~"
+				    then
+					    word = word .. "~"
+				    end
+				    vim_item.abbr = word
+
+				    return vim_item
+          end
+      })
+    },
     snippet = {
       expand = function(args)
         luasnip.lsp_expand(args.body)

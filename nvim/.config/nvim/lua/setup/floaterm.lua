@@ -16,5 +16,5 @@ vim.g.floaterm_height = 0.9
 vim.g.floaterm_autoinsert = true
 vim.g.floaterm_wintype = 'float'
 
-vim.cmd([[ autocmd User FloatermOpen hi FloatermBorder guibg=NONE guifg=black ]])
+vim.cmd([[ autocmd User FloatermOpen hi FloatermBorder guibg=#393649 guifg=#8AFF80 ]])
 vim.cmd([[ autocmd FileType floaterm call v:lua.load_floaterm_keymap() ]])

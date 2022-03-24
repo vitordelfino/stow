@@ -49,6 +49,18 @@ function packer_startup(use)
   use "github/copilot.vim"
   use "xianzhon/vim-code-runner"
   use "windwp/nvim-ts-autotag"
+  use "onsails/lspkind-nvim"
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    },
+    config = function() require'nvim-tree'.setup {} end
+  }
+  use {
+    'weilbith/nvim-code-action-menu',
+    cmd = 'CodeActionMenu',
+  }
 end
 
 local packer_config = {

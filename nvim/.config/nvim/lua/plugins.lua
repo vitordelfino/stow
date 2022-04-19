@@ -61,6 +61,9 @@ function packer_startup(use)
     'weilbith/nvim-code-action-menu',
     cmd = 'CodeActionMenu',
   }
+  use {'nvim-telescope/telescope-ui-select.nvim' }
+  use {"ellisonleao/glow.nvim"}
+  use "ellisonleao/carbon-now.nvim"
 end
 
 local packer_config = {

@@ -1,14 +1,19 @@
 local telly = require("telescope")
 local actions = require("telescope.actions")
 
-vim.api.nvim_set_keymap("n", "<leader>,", ":Telescope buffers disable_devicons=true theme=get_ivy<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>.", ":Telescope find_files disable_devicons=true theme=get_ivy<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>m", ":Telescope live_grep disable_devicons=true theme=get_ivy<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>,", ":Telescope buffers disable_devicons=false theme=get_dropdown<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>.", ":Telescope find_files disable_devicons=false theme=get_dropdown<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>m", ":Telescope live_grep disable_devicons=false theme=get_dropdown<CR>", { noremap = true, silent = true })
 
 telly.setup({
+    extensions = {
+      ["ui-select"] = {
+        require("telescope.themes").get_cursor(),
+      }
+    },
     pickers = {
       find_files = {
-        hidden = true,
+        hidden = false,
       },
       buffers = {
         mappings = {
@@ -28,8 +33,9 @@ telly.setup({
         "--column",
         "--smart-case"
       },
-      prompt_prefix = "> ",
-      selection_caret = "> ",
+      color_devicons = true,
+      prompt_prefix = " 🔍 ",
+      selection_caret = "❯ ",
       entry_prefix = "  ",
       initial_mode = "insert",
       selection_strategy = "reset",
@@ -49,7 +55,6 @@ telly.setup({
       winblend = 0,
       border = {},
       borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
-      color_devicons = false,
       use_less = true,
       path_display = {},
       set_env = { ['COLORTERM'] = 'truecolor' }, -- default = nil,
@@ -61,3 +66,4 @@ telly.setup({
       buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker
     }
   })
+require("telescope").load_extension("ui-select")

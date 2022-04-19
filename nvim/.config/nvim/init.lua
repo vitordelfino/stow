@@ -16,6 +16,8 @@ require("setup/comment")
 require("setup/rainbow")
 require("setup/close_tag")
 require("setup/nvim_tree")
+require("setup/glow")
+require("setup/carbon")
 
 -- ui configuration
 vim.g.fillchars = "vim.g.fillchars" .. "vert:\\|"

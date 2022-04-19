@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/vitor.delfino/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["carbon-now.nvim"] = {
+    loaded = true,
+    path = "/Users/vitor.delfino/.local/share/nvim/site/pack/packer/start/carbon-now.nvim",
+    url = "https://github.com/ellisonleao/carbon-now.nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/Users/vitor.delfino/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -118,6 +123,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vitor.delfino/.local/share/nvim/site/pack/packer/start/editorconfig-vim",
     url = "https://github.com/editorconfig/editorconfig-vim"
+  },
+  ["glow.nvim"] = {
+    loaded = true,
+    path = "/Users/vitor.delfino/.local/share/nvim/site/pack/packer/start/glow.nvim",
+    url = "https://github.com/ellisonleao/glow.nvim"
   },
   gruvbox = {
     loaded = true,
@@ -202,6 +212,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vitor.delfino/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["telescope-ui-select.nvim"] = {
+    loaded = true,
+    path = "/Users/vitor.delfino/.local/share/nvim/site/pack/packer/start/telescope-ui-select.nvim",
+    url = "https://github.com/nvim-telescope/telescope-ui-select.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
